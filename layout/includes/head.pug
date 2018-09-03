@@ -1,11 +1,30 @@
 - var pageTitle = page.title || config.subtitle || ''
+- var title = []
+if (page.title)
+    - title.push(page.title)
+if (page.category)
+    - title.push(__('title_category', page.category))
+if (page.tag)
+    - title.push(__('title_tag', page.tag))
+if (page.archive) 
+    if (page.year) 
+        - var push = page.year
+        if page.month
+            push = push + '/' + page.month
+        - title.push( __('archive_b', push ) )
+    else
+        - title.push(__('archive_a'))
+if (page.current > 1)
+    - title.push(__('page', page.current))
+
+- title.push(config.title)
 
 meta(charset='UTF-8')
 meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
 meta(name='viewport', content='width=device-width, initial-scale=1')
 if theme.google_site_verification
     meta(name='google-site-verification' content=theme.google_site_verification)
-title= pageTitle
+title!=title.join(' | ')
 link(rel="shortcut icon", href=url_for('/images/avatar.png'))
 link(rel='stylesheet', href=url_for('/css/style.min.css'))
 link(rel='stylesheet', href='//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css')

@@ -1,0 +1,5 @@
+page: "Page %s"
+archive_a: "Archive"
+archive_b: "Posts from %s"
+title_category: "Posts in %s"
+title_tag: "Posts tagged #%s"
