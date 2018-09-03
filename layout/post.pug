@@ -1,0 +1,50 @@
+extends includes/layout
+
+block content
+
+    section#wrapper.post
+        article
+            header
+                h1!=page.title
+                h2.headline!=date(page.date, 'MMM DD, YYYY h:mm')
+                    | <br>
+                    |#{wordcount(page.content)} words
+                    |·&nbsp;
+                    |#{min2read(page.content)} minutes read
+
+            if !page.hidetoc && toc(page.content)
+                div#toc!=toc(page.content,{list_number:false})
+
+            section#post-body!=page.content
+
+            if ((page.tags && page.tags.length) | (page.categories && page.categories.length))
+                hr
+                if (page.categories.length)
+                    div.categories
+                        b Posted in: &nbsp;
+                        != list_categories(page.categories, {style: false, show_count: false})
+                if (page.tags.length)
+                    div.tags
+                        b Tagged: &nbsp;
+                        != list_tags(page.tags, {style: false, show_count: false})
+
+            if (page.original_url)
+                span.original_url
+                    b Originally published at &nbsp;
+                    =page.original_url
+
+            - var prev = page.prev ? page.prev.path : false;
+            - var next = page.next ? page.next.path : false;
+            nav#post-nav
+                span.prev
+                    if page.prev
+                        a(href=url_for(prev))
+                            span.arrow ←
+                            | Newer Posts
+                span.next
+                    if page.next
+                        a(href=url_for(next))
+                            | Older Posts
+                            span.arrow →
+
+            include includes/comment.pug

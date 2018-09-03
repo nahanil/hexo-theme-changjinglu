@@ -1,0 +1,29 @@
+{
+  "name": "hexo-theme-dxx",
+  "version": "1.0.0",
+  "description": "a Simple and beautiful theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuzhouxxdong/hexo-theme-dxx.git"
+  },
+  "keywords": [
+    "hexo",
+    "simple",
+    "beautiful"
+  ],
+  "author": "fuzhouxxdong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fuzhouxxdong/hexo-theme-dxx/issues"
+  },
+  "homepage": "https://github.com/fuzhouxxdong/hexo-theme-dxx#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}

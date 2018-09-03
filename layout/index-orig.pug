@@ -1,0 +1,32 @@
+extends includes/layout
+
+block content
+
+    section#wrapper.home
+        ul#post-list
+            each item in page.posts.sort('date', -1).toArray()
+                - var postTitle = item.title || 'No Title'
+                - var createDate = date(item.date, 'MMM DD')
+                li
+                    aside.dates=createDate
+                    if item.link
+                        a(href=url_for(item.link))= postTitle
+                            h2!=item.excerpt
+                    else
+                        a(href=url_for(item.path))= postTitle
+                            h2!=item.excerpt
+
+        nav#post-nav
+            span.prev(style='padding-left: 20px;')
+                if page.prev
+                    a(href=url_for(page.prev_link))
+                        span.arrow ←
+                        | Newer Posts
+            span.next
+                if page.next
+                    a(href=url_for(page.next_link))
+                        | Older Posts
+                        span.arrow →
+
+
+

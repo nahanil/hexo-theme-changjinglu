@@ -1,0 +1,13 @@
+- var title = config.title
+- var bio = config.bio
+div.profile
+    section#wrapper
+        header#header
+            a(href=url_for('/'))
+                if page.bitmoji
+                    img(id='avatar', class='2x', src=url_for('/images/bitmoji/'+ page.bitmoji  +'.png'))
+                else
+                    img(id='avatar', class='2x', src=url_for('/images/bitmoji/'+  ['a','b','c', 'd'][Math.floor(Math.random()*3)]  +'.png'))
+
+            // h1!=title
+            // h2!=bio

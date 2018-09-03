@@ -1,0 +1,40 @@
+extends includes/layout
+
+block content
+    - title = __("Archive")
+    if page.tag
+        - title = "#" + page.tag
+    if page.category
+        - title = page.category
+
+    section#wrapper.home
+
+        div.archive
+            h3!=title
+            - var lastYear = 0
+            each item in page.posts.sort('date', -1).toArray()
+                - var postTitle = item.title || 'No Title'
+                - var createDate = date(item.date, 'MMM DD')
+                - var curYear = date(item.date, 'Y')
+                if (lastYear != curYear) 
+                    - var lastYear = curYear
+                    h4.year #{curYear}
+
+                div.post-item
+                    div.post-time=createDate
+                    if item.link
+                        a.post-link(href=url_for(item.link))= postTitle
+                    else
+                        a.post-link(href=url_for(item.path))= postTitle
+
+        nav#post-nav
+            span.prev(style='padding-left: 20px;')
+                if page.prev
+                    a(href=url_for(page.prev_link))
+                        span.arrow ←
+                        | Newer Posts
+            span.next
+                if page.next
+                    a(href=url_for(page.next_link))
+                        | Older Posts
+                        span.arrow →

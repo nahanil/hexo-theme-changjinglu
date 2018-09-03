@@ -1,0 +1,21 @@
+- var items = []
+- var title = ''
+- var isTagIndex = page.type === 'tags' || page.type === 'tag'
+- var isCategoryIndex = page.type === 'categories' || page.type === 'category'
+
+if isTagIndex
+    - items = site.tags
+    - title = __('Tags')
+else if isCategoryIndex
+    - items = site.categories
+    - title = __('Categories')
+
+h1!=page.title || title
+
+if page.content
+    section#post-body!=page.content
+
+ul
+each item in items.toArray()
+    li
+      a(href=item.name)!=item.name

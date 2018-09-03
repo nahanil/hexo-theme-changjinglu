@@ -1,0 +1,10 @@
+extends includes/layout
+
+block content
+    section#wrapper.post
+        - var isTagIndex = page.type === 'tags' || page.type === 'tag'
+        - var isCategoryIndex = page.type === 'categories' || page.type === 'category'
+        if isTagIndex || isCategoryIndex
+              include includes/tag-category-index.pug
+        else
+              include includes/page-content.pug
