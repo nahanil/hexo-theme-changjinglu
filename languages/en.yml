@@ -6,8 +6,8 @@ categories: "Categories"
 title_category: "Posts in %s"
 title_tag: "Posts tagged #%s"
 comments: "Leave a comment"
-prev: 上一页
-next: 下一页
+prev: Previous Post
+next: Next Post
 newer: Newer Posts
 older: Older Posts
 wordcount: "%s词"
