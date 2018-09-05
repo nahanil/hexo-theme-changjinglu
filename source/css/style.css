@@ -614,6 +614,13 @@ Post List
     margin-top: 40px;
 }
 
+#post-nav:after {
+  display: block;
+  content: ' ';
+  height: 0;
+  clear: both;
+}
+
 #post-nav span {
     -webkit-transition: all 0.1s linear;
     -moz-transition: all 0.1s linear;
@@ -652,6 +659,10 @@ Post List
     right: -3px;
 }
 
+/* Comments */
+#comments{
+  margin-top: 25px;
+}
 
 /* Archive */
 
@@ -784,6 +795,9 @@ h2.month {
     }
     .post h2.headline {
         font-size: 13px;
+    }
+    .post h2.headline a {
+        color: inherit;
     }
     .post h1 {
         font-size: 24px;
