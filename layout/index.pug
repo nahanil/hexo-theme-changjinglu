@@ -25,11 +25,11 @@ block content
                 if page.prev
                     a(href=url_for(page.prev_link))
                         span.arrow ←
-                        | Newer Posts
+                        = __('newer')
             span.next
                 if page.next
                     a(href=url_for(page.next_link))
-                        | Older Posts
+                        = __('older')
                         span.arrow →
 
 

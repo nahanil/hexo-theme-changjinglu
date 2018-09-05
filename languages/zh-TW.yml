@@ -1,13 +1,13 @@
-page: "Page %s"
-archive_a: "Archive"
-archive_b: "Posts from %s"
+page: 第 %d 頁
+archive_a: 彙整
+archive_b: 彙整：%s
 tags: "Tags"
 categories: "Categories"
 title_category: "Posts in %s"
 title_tag: "Posts tagged #%s"
-comments: "Leave a comment"
-prev: 上一页
-next: 下一页
+comments: 留言
+prev: 上一頁
+next: 下一頁
 newer: Newer Posts
 older: Older Posts
 wordcount: "%s词"

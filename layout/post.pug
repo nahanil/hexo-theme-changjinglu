@@ -6,12 +6,12 @@ block content
         article
             header
                 h1!=page.title
-                h2.headline!=date(page.date, 'MMM DD, YYYY h:mm')
+                h2.headline!=date(page.date, theme.date_format)
                     | <br>
-                    |#{wordcount(page.content)} words
+                    = __('wordcount', wordcount(page.content))
                     |·&nbsp;
                     |#{min2read(page.content)} minutes read
-                    if !page.hide_comments
+                    if theme.isso.enable && !page.hide_comments
                         |&nbsp;·&nbsp;
                         a(href=url_for(page.path)+'#isso-thread') 0 Comments
 
@@ -24,16 +24,19 @@ block content
                 hr
                 if (page.categories.length)
                     div.categories
-                        b Posted in: &nbsp;
+                        b= __('posted_in')
+                        | &nbsp;
                         != list_categories(page.categories, {style: false, show_count: false})
                 if (page.tags.length)
                     div.tags
-                        b Tagged: &nbsp;
+                        b= __('tagged')
+                        | &nbsp;
                         != list_tags(page.tags, {style: false, show_count: false})
 
             if (page.original_url)
                 span.original_url
-                    b Originally published at &nbsp;
+                    b= __('original_url')
+                    | &nbsp;
                     =page.original_url
 
             - var prev = page.prev ? page.prev.path : false;

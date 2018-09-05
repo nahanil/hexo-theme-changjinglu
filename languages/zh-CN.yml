@@ -1,11 +1,11 @@
-page: "Page %s"
-archive_a: "Archive"
-archive_b: "Posts from %s"
+page: 第 %d 页
+archive_a: 归档
+archive_b: 归档：%s
 tags: "Tags"
 categories: "Categories"
 title_category: "Posts in %s"
 title_tag: "Posts tagged #%s"
-comments: "Leave a comment"
+comments: 留言
 prev: 上一页
 next: 下一页
 newer: Newer Posts

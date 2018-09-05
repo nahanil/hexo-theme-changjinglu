@@ -34,8 +34,12 @@ git pull origin master
 ```yaml
 theme_config:
   language: en
-  # I don't think these two actually do anything...
+  # Date format used at the top of blog posts
+  date_format: "MMM DD, YYYY h:mm"
+
+  ## author is used in footer copyright line
   author: Jarrod Linahan
+  # I don't think these two actually do anything...
   description: good good study day day up
 
   # Set the links shown in the top menu

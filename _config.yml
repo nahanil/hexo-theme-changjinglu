@@ -1,5 +1,6 @@
 root: /
 language: en
+date_format: "MMM DD, YYYY h:mm"
 
 # I don't think these two actually do anything...
 author: John Doe
