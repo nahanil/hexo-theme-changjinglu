@@ -1,23 +1,34 @@
 root: /
+language: en
 
+# I don't think these two actually do anything...
+author: John Doe
+description: good good study day day up
+
+# Set the links shown in the top menu
 menu:
   Home: /
   Archives: /archives
   About Me: /about
 
-language: en
 
-author: fuzhouxx Dong
-description: good good study day day up
+# Add Google site verification/Google Analytics
+google_site_verification:
+google_analytics:
+
+# Add Matomo analyitcs
+# See: https://matomo.org/
+matomo:
+  url:
+  site_id:
+  track_no_js: 
 
 disqus:
   enable: false
   shortname:
 
-google_site_verification:
-google_analytics:
-
-matomo:
-  url:
-  site_id:
-  track_no_js:
+# Use Isso for comments
+# See: https://posativ.org/isso/
+isso:
+  enable: false
+  host: 
