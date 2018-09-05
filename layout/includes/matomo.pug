@@ -1,0 +1,18 @@
+if theme.matomo && theme.matomo.url
+    script
+        | var _paq = _paq || [];
+        | _paq.push(['trackPageView']);
+        | _paq.push(['enableLinkTracking']);
+        | (function() {
+        != 'var u="' + theme.matomo.url + '";'
+        |   _paq.push(['setTrackerUrl', u+'piwik.php']);
+        |   _paq.push(['setSiteId', 
+        != "'"+ theme.matomo.site_id +"'"
+        | ]);
+        |   var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        |   g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        | })();
+    if theme.matomo.track_no_js
+    noscript
+        p
+            img(src=theme.matomo.url + "piwik.php?idsite=" + theme.matomo.site_id + "&rec=" style="border:0;" alt="")
