@@ -46,11 +46,11 @@ block content
                     if page.prev
                         a(href=url_for(prev))
                             span.arrow ←
-                            = __('next')
+                            = page.prev.title
                 span.next
                     if page.next
                         a(href=url_for(next))
-                            = __('prev')
+                            = page.next.title
                             span.arrow →
 
             if !page.hide_comments
