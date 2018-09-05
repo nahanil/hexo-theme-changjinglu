@@ -9,7 +9,7 @@ block content
                 h2.headline!=date(page.date, theme.date_format)
                     | <br>
                     = __('wordcount', wordcount(page.content))
-                    |·&nbsp;
+                    |&nbsp;·&nbsp;
                     |#{min2read(page.content)} minutes read
                     if theme.isso.enable && !page.hide_comments
                         |&nbsp;·&nbsp;
