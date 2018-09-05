@@ -6,3 +6,11 @@ if (theme.disqus.enable)
                 a(href='http://disqus.com/?ref_noscript')!='comments powered by Disqus.'
 
     include disqus.pug
+
+if (theme.isso.enable)
+    section#comments
+        h3= __('comments')
+        div#isso-thread
+            noscript
+                |Please enable JavaScript to view the comments
+    script(src=theme.isso.host + '/js/embed.min.js' data-isso=theme.isso.host)

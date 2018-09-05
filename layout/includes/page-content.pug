@@ -1,6 +1,10 @@
 article
     header
         h1!=page.title
+        if page.allow_comments && !page.hide_comment_link
+            h2.headline
+                a(href=url_for(page.path)+'#isso-thread') 0 Comments
+
 
     if !page.hidetoc && toc(page.content)
         div#toc!=toc(page.content,{list_number:false})
@@ -21,4 +25,6 @@ article
                     | Older Posts
                     span.arrow →
 
-    include ../includes/comment.pug
+    if page.allow_comments
+        hr
+        include ../includes/comment.pug
