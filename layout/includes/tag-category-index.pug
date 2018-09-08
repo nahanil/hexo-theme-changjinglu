@@ -18,5 +18,4 @@ if page.content
 ul
 each item in items.toArray()
     li
-      - console.log(item.slug)
       a(href=item.slug)!=item.name
