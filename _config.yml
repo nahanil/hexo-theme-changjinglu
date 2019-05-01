@@ -33,3 +33,7 @@ disqus:
 isso:
   enable: false
   host: 
+
+utterances:
+  enable: false
+  repo: "foo/bar-repo"

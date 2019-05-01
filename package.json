@@ -1,6 +1,7 @@
 {
-  "name": "hexo-theme-dxx",
-  "version": "1.0.0",
+  "name": "hexo-theme-changjinglu",
+  "version": "1.0.1",
+  "private": true,
   "description": "a Simple and beautiful theme",
   "main": "index.js",
   "scripts": {
@@ -9,19 +10,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fuzhouxxdong/hexo-theme-dxx.git"
+    "url": "https://git.carrotlabs.net/jarrod/hexo-theme-changjinglu.git"
   },
-  "keywords": [
-    "hexo",
-    "simple",
-    "beautiful"
-  ],
-  "author": "fuzhouxxdong",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/fuzhouxxdong/hexo-theme-dxx/issues"
-  },
-  "homepage": "https://github.com/fuzhouxxdong/hexo-theme-dxx#readme",
   "devDependencies": {
   },
   "dependencies": {
