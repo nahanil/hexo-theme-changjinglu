@@ -14,3 +14,12 @@ if (theme.isso.enable)
             noscript
                 |Please enable JavaScript to view the comments
     script(src=theme.isso.host + '/js/embed.min.js' data-isso=theme.isso.host)
+
+if (theme.utterances.enable)
+    hr
+    script(src="https://utteranc.es/client.js"
+           repo=theme.utterances.repo
+           issue-term="pathname"
+           theme="github-light"
+           crossorigin="anonymous"
+           async)
