@@ -303,6 +303,13 @@ em, i {
   font-style: italic;
 }
 
+code {
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
 #title {
   display: inline-block;
   line-height: 100%;
