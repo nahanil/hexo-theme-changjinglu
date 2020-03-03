@@ -21,7 +21,7 @@ Install the theme's plugin dependencies:
 
 Clone the theme from GitHub
 ```shell
-git clone https://github.com/texh/hexo-theme-changjinglu.git themes/changjinglu
+git clone https://github.com/nahanil/hexo-theme-changjinglu.git themes/changjinglu
 ```
 Aaaand, if you need to update it at any point
 ```shell

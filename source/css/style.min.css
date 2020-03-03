@@ -295,7 +295,7 @@ white-space: pre-wrap;
 }
 
 b, strong {
-  font-weight: 500;
+  font-weight: 600;
   color: #1E2025;
 }
 
@@ -308,6 +308,11 @@ code {
   background: rgba(0, 0, 0, 0.05);
   padding: 2px 4px;
   border-radius: 4px;
+  white-space: nowrap;
+}
+
+small {
+  font-size: 0.8em;
 }
 
 #title {
