@@ -53,6 +53,14 @@ table {
   display: none;
 }
 
+.hiddenish {
+  padding:0 !important;
+  margin:0 !important;
+  font-size:0 !important;
+  color:transparent !important;
+  line-height:0 !important;
+}
+
 
 /* Icons */
 
@@ -186,14 +194,14 @@ nav.main-nav a {
   top: 8px;
   right: 6px;
   padding: 8px 12px;
-  color: #5badf0;
+  color: #686de0;
   font-size: 13px;
   line-height: 1.35;
   border-radius: 3px;
 }
 
 nav.main-nav a.cta {
-  background: #5badf0;
+  background: #686de0;
   color: #fff;
   margin-left: 12px;
 }
@@ -210,7 +218,7 @@ nav.main-nav a {
     top: 8px;
     right: 6px;
     padding: 8px 8px;
-    color: #5badf0;
+    color: #686de0;
     font-size: 13px;
     line-height: 1.35;
     border-radius: 3px;
@@ -249,12 +257,16 @@ nav.main-nav a {
 
 a, #title, #post-list a:hover, #title:hover {
   text-decoration: none;
-  color: #5badf0;
-  color: #5694f1;
+  color: #686de0;
 }
 
 p a {
-  color: #5694f1;
+  color: #686de0;
+  transition: color ease-in 0.18s;
+}
+
+p a:hover {
+  color: #e056fd;
 }
 
 
@@ -309,6 +321,15 @@ code {
   padding: 2px 4px;
   border-radius: 4px;
   white-space: nowrap;
+  color: #f0932b;
+  color: #22a6b3
+}
+
+a code {
+  color: inherit;
+}
+a code {
+  color: inherit;
 }
 
 small {
@@ -538,9 +559,9 @@ Post List
 }
 
 #archive-link:hover {
-  background: #5694f1;
+  background: #686de0;
   color: #fff;
-  box-shadow: 0 0 0 1px #5694f1;
+  box-shadow: 0 0 0 1px #686de0;
 }
 
 #archive-link span {
@@ -714,7 +735,7 @@ h2.month {
 }
 
 #archive-list li a:hover, #archive-list li:hover .dates {
-  color: #5694f1;
+  color: #686de0;
 }
 
 #post-meta img.avatar {
@@ -740,7 +761,7 @@ h2.month {
 
 #post-list.archive.readmore a {
   font: 400 16px/1.6 "Helvetica Neue", helvetica, Arial, sans-serif;
-  color: #5694f1;
+  color: #686de0;
 }
 
 #post-list.archive.readmore a:hover {
@@ -854,11 +875,11 @@ h2.month {
 }
 
 .archive .post-item:hover {
-  color: #5694f1;
+  color: #686de0;
   transition: 0.3s ease-out;
 }
 .archive .post-item:hover .post-link {
-  color: #5694f1;
+  color: #686de0;
 }
 
 .fa.fa-heart:hover {
@@ -981,7 +1002,7 @@ font-weight: inherit;
   font-size: .9em;
 }
 .page-tags ul li a:hover {
-  color: #5694f1;
+  color: #686de0;
 }
 
 
@@ -1091,8 +1112,9 @@ padding-left: 10px;
 .highlight pre {
 padding: 0;
 overflow: auto;
-font-size: 1.1em;
+font-size: 1.2em;
 line-height: inherit;
+/* line-height: 1.2em; */
 background-color: transparent;
 border-radius: 0;
 margin: 0;
